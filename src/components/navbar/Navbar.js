@@ -9,13 +9,17 @@ const Navbar = () => {
   let [show, setShow] = useState(true);
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    function scrollWidth() {
       if (window.innerWidth < 1024) {
         setShow(false);
       } else {
         setShow(true);
       }
-    });
+    }
+
+    scrollWidth();
+
+    window.addEventListener("resize", scrollWidth);
   }, []);
 
   return (
