@@ -12,6 +12,11 @@ module.exports = {
       colors: {
         primary: "#262626",
         secondary: "#767676",
+        pure: "#fff",
+        fade: "#FFFFFFB2",
+        flat: "#F5F5F3",
+        palet: "#F3F3F3",
+        rare: "#2D2D2D",
       },
     },
   },

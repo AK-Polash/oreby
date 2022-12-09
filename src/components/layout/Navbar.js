@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full bg-red-400">
+    <nav className="w-full">
       <Container>
         <Flex className="lg:flex justify-between items-center">
           <div className="w-1/5">
@@ -37,7 +37,7 @@ const Navbar = () => {
           />
 
           {show && (
-            <div className="bg-red-400 lg:bg-transparent w-full lg:w-4/5">
+            <div className="w-full lg:w-4/5">
               <List className="w-full lg:w-auto flex flex-col justify-center items-center gap-y-5 lg:gap-y-0 lg:flex-row lg:justify-end lg:items-center lg:gap-x-10 py-5">
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
