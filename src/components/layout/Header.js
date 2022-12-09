@@ -12,7 +12,7 @@ const Header = () => {
         <Container>
           <Flex className="flex justify-between items-center">
             <Dropdown className="py-4">
-              <List className="w-[263px] bg-primary">
+              <List className="w-[263px] bg-primary absolute">
                 <ListItem
                   className="font-dm text-sm font-normal text-fade px-5 py-3.5 border-rare border-b-[1px] transition-all ease-linear duration-150 hover:text-pure hover:font-bold hover:pl-7"
                   item="Accesories"
@@ -39,8 +39,8 @@ const Header = () => {
                 />
               </List>
             </Dropdown>
-            <h1>Hey</h1>
-            <h1>Buddy</h1>
+            <h1>Search Box</h1>
+            <h1>User & Cart Section</h1>
           </Flex>
         </Container>
       </div>
