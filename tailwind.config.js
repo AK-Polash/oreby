@@ -13,6 +13,7 @@ module.exports = {
         primary: "#262626",
         secondary: "#767676",
         pure: "#fff",
+        dope: "#c4c4c4",
         fade: "#FFFFFFB2",
         flat: "#F5F5F3",
         palet: "#F3F3F3",

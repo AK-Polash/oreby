@@ -24,21 +24,21 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full">
+    <nav className="w-full py-8">
       <Container>
-        <Flex className="lg:flex justify-between items-center">
+        <Flex className="items-center justify-between lg:flex">
           <div className="w-1/5">
             <Image source="assets/logo.png" className="w-16" alt="logo" />
           </div>
 
           <HiBars3
             onClick={() => setShow(!show)}
-            className="w-7 h-7 block lg:hidden ml-auto cursor-pointer absolute top-1 right-2.5 z-50"
+            className="absolute top-8 right-2.5 z-50 ml-auto block h-7 w-7 cursor-pointer lg:hidden"
           />
 
           {show && (
             <div className="w-full lg:w-4/5">
-              <List className="w-full lg:w-auto flex flex-col justify-center items-center gap-y-5 lg:gap-y-0 lg:flex-row lg:justify-end lg:items-center lg:gap-x-10 py-5">
+              <List className="flex w-full flex-col items-center justify-center gap-y-5 lg:w-auto lg:flex-row lg:items-center lg:justify-end lg:gap-y-0 lg:gap-x-10">
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="Home"

@@ -19,7 +19,7 @@ const Dropdown = ({ children, className, title }) => {
   return (
     <div className={className}>
       <DropdownHeading
-        className="flex items-center gap-x-2.5 py-[23px] cursor-pointer"
+        className="flex cursor-pointer items-center gap-x-2.5"
         dropref={ref}
       >
         <RiBarChartHorizontalLine />
