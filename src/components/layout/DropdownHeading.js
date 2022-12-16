@@ -1,14 +1,9 @@
 import React from "react";
 
-const DropdownHeading = ({ children, className, show, setShow }) => {
+const DropdownHeading = ({ children, className, dropref }) => {
   return (
     <>
-      <div
-        onClick={() => {
-          setShow(!show);
-        }}
-        className={className}
-      >
+      <div className={className} ref={dropref}>
         {children}
       </div>
     </>
