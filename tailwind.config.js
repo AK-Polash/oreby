@@ -18,6 +18,8 @@ module.exports = {
         flat: "#F5F5F3",
         palet: "#F3F3F3",
         rare: "#2D2D2D",
+        caret: "#2b2b2b",
+        smoke: "#f0f0f0",
       },
     },
   },
