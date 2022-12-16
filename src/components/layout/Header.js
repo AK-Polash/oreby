@@ -120,20 +120,40 @@ const Header = () => {
                   <FaShoppingCart className="w-[17px] cursor-pointer" />
 
                   {cartDropdownShow && (
-                    <div className="absolute top-8 right-0 w-[360px] border border-solid border-smoke bg-flat p-5">
-                      <Flex className="flex items-center justify-between">
+                    <div className="absolute top-8 right-0 w-[360px] border border-solid border-smoke">
+                      <Flex className="flex items-center justify-between bg-flat p-5">
                         <Flex className="flex items-center gap-x-5">
                           <Image
-                            className="h-20 w-20 "
-                            source="../assets/cart_image.png"
+                            className="h-20 w-20"
+                            source="./assets/cart_image.png"
                             alt="cartImg"
                           />
-                          <div>hi</div>
+                          <div className=" font-dm text-sm font-bold ">
+                            <p className="pb-3"> Black Smart Watch </p>
+                            <p> $44.00 </p>
+                          </div>
                         </Flex>
-                        <ImCross className="h-3 w-3" />
+                        <ImCross className="h-3 w-3 cursor-pointer" />
                       </Flex>
 
-                      <div className="bg-green-400">hello</div>
+                      <div className="bg-pure pt-[14px] pb-5 pr-5 pl-5">
+                        <div className="pb-3 font-dm text-base">
+                          <span className="font-normal text-secondary">
+                            Subtotal:
+                          </span>
+                          <span className="pl-1 font-bold text-primary">
+                            $44.00
+                          </span>
+                        </div>
+                        <Flex className="flex items-center justify-between gap-x-5">
+                          <button className="border-[1.5px] border-caret bg-pure px-10 py-4 font-dm text-sm font-bold text-primary">
+                            View Cart
+                          </button>
+                          <button className="border-[1.5px] border-transparent bg-primary px-10 py-4 font-dm text-sm font-bold text-pure">
+                            Checkout
+                          </button>
+                        </Flex>
+                      </div>
                     </div>
                   )}
                 </Dropdown>
