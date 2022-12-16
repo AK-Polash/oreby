@@ -56,7 +56,7 @@ const Header = () => {
               </div>
 
               {categoryDropdownShow && (
-                <List className="absolute top-[140%] z-10 w-[263px] bg-primary">
+                <List className="absolute top-8 z-10 w-[263px] bg-primary">
                   <ListItem
                     className="border-b-[1px] border-rare px-5 py-3.5 font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Accesories"
@@ -102,7 +102,7 @@ const Header = () => {
                 </div>
 
                 {userDropdownShow && (
-                  <List className="absolute top-[140%] right-0 z-10 w-[200px] bg-pure">
+                  <List className="absolute top-8 right-0 z-10 w-[200px] bg-pure">
                     <ListItem
                       className="cursor-pointer border-x-[1px] border-t border-b border-smoke py-[14px] px-[58px] text-center font-dm text-sm font-normal text-primary transition-all duration-150 ease-linear hover:border-transparent hover:bg-caret hover:font-bold hover:text-pure"
                       item="My Account"
@@ -115,49 +115,47 @@ const Header = () => {
                 )}
               </Dropdown>
 
-              <div>
-                <Dropdown className="relative" dropRef={cartRef}>
-                  <FaShoppingCart className="w-[17px] cursor-pointer" />
+              <Dropdown className="relative" dropRef={cartRef}>
+                <FaShoppingCart className="w-[17px] cursor-pointer" />
 
-                  {cartDropdownShow && (
-                    <div className="absolute top-8 right-0 w-[360px] border border-solid border-smoke">
-                      <Flex className="flex items-center justify-between bg-flat p-5">
-                        <Flex className="flex items-center gap-x-5">
-                          <Image
-                            className="h-20 w-20"
-                            source="./assets/cart_image.png"
-                            alt="cartImg"
-                          />
-                          <div className=" font-dm text-sm font-bold ">
-                            <p className="pb-3"> Black Smart Watch </p>
-                            <p> $44.00 </p>
-                          </div>
-                        </Flex>
-                        <ImCross className="h-3 w-3 cursor-pointer" />
-                      </Flex>
-
-                      <div className="bg-pure pt-[14px] pb-5 pr-5 pl-5">
-                        <div className="pb-3 font-dm text-base">
-                          <span className="font-normal text-secondary">
-                            Subtotal:
-                          </span>
-                          <span className="pl-1 font-bold text-primary">
-                            $44.00
-                          </span>
+                {cartDropdownShow && (
+                  <div className="absolute top-8 right-0 z-10 w-[360px] border border-solid border-smoke">
+                    <Flex className="flex items-center justify-between bg-flat p-5">
+                      <Flex className="flex items-center gap-x-5">
+                        <Image
+                          className="h-20 w-20"
+                          source="./assets/cart_image.png"
+                          alt="cartImg"
+                        />
+                        <div className=" font-dm text-sm font-bold ">
+                          <p className="pb-3"> Black Smart Watch </p>
+                          <p> $44.00 </p>
                         </div>
-                        <Flex className="flex items-center justify-between gap-x-5">
-                          <button className="border-[1.5px] border-caret bg-pure px-10 py-4 font-dm text-sm font-bold text-primary">
-                            View Cart
-                          </button>
-                          <button className="border-[1.5px] border-transparent bg-primary px-10 py-4 font-dm text-sm font-bold text-pure">
-                            Checkout
-                          </button>
-                        </Flex>
+                      </Flex>
+                      <ImCross className="h-3 w-3 cursor-pointer" />
+                    </Flex>
+
+                    <div className="bg-pure pt-[14px] pb-5 pr-5 pl-5">
+                      <div className="pb-3 font-dm text-base">
+                        <span className="font-normal text-secondary">
+                          Subtotal:
+                        </span>
+                        <span className="pl-1 font-bold text-primary">
+                          $44.00
+                        </span>
                       </div>
+                      <Flex className="flex items-center justify-between gap-x-5">
+                        <button className="border-[1.5px] border-caret bg-pure px-10 py-4 font-dm text-sm font-bold text-primary">
+                          View Cart
+                        </button>
+                        <button className="border-[1.5px] border-transparent bg-primary px-10 py-4 font-dm text-sm font-bold text-pure">
+                          Checkout
+                        </button>
+                      </Flex>
                     </div>
-                  )}
-                </Dropdown>
-              </div>
+                  </div>
+                )}
+              </Dropdown>
             </Flex>
           </Flex>
         </Container>
