@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Container from "./Container";
 import Dropdown from "./Dropdown";
 import Flex from "./Flex";
@@ -6,9 +7,8 @@ import List from "./List";
 import ListItem from "./ListItem";
 import Search from "./Search";
 import Image from "./Image";
-import { BiSearch } from "react-icons/bi";
 import { RiBarChartHorizontalLine } from "react-icons/ri";
-import { FaUserAlt, FaShoppingCart } from "react-icons/fa";
+import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa";
 import { RxTriangleDown } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
 
@@ -91,7 +91,7 @@ const Header = () => {
                 placeholder="Search Product"
               />
 
-              <BiSearch className="absolute top-[50%] right-[21px] -translate-y-2/4" />
+              <FaSearch className="absolute top-[50%] right-[21px] -translate-y-2/4" />
             </div>
 
             <Flex className="flex items-center justify-between gap-x-10">
@@ -145,12 +145,18 @@ const Header = () => {
                         </span>
                       </div>
                       <Flex className="flex items-center justify-between gap-x-5">
-                        <button className="border-[1.5px] border-caret bg-pure px-10 py-4 font-dm text-sm font-bold text-primary">
+                        <Link
+                          to="#"
+                          className="border-[1.5px] border-caret bg-pure px-10 py-[14px] font-dm text-sm font-bold text-primary"
+                        >
                           View Cart
-                        </button>
-                        <button className="border-[1.5px] border-transparent bg-primary px-10 py-4 font-dm text-sm font-bold text-pure">
+                        </Link>
+                        <Link
+                          to="#"
+                          className="border-[1.5px] border-transparent bg-primary px-10 py-[14px] font-dm text-sm font-bold text-pure"
+                        >
                           Checkout
-                        </button>
+                        </Link>
                       </Flex>
                     </div>
                   </div>
