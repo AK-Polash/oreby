@@ -44,7 +44,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full bg-flat py-0 lg:py-[5px] 2xl:py-[25px]">
+      <div className="w-full bg-flat py-0 lg:py-[5px] xl:py-3 2xl:py-[25px]">
         <Container>
           <Flex className="flex items-center justify-between gap-x-[10px]">
             <Dropdown className="relative" dropRef={categoryRef}>
