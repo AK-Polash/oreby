@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="w-full py-8">
+    <nav className="relative w-full py-1 md:py-2 lg:py-4 2xl:py-8">
       <Container>
         <Flex className="items-center justify-between lg:flex">
           <div className="w-1/5">
@@ -33,7 +33,7 @@ const Navbar = () => {
 
           <HiBars3
             onClick={() => setShow(!show)}
-            className="absolute top-8 right-2.5 z-50 ml-auto block h-7 w-7 cursor-pointer lg:hidden"
+            className="absolute top-2 right-2.5 z-50 ml-auto block h-7 w-7 cursor-pointer md:top-3 lg:hidden"
           />
 
           {show && (

@@ -44,19 +44,19 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full bg-flat py-[25px]">
+      <div className="w-full bg-flat py-0 lg:py-[5px] 2xl:py-[25px]">
         <Container>
-          <Flex className="flex items-center justify-between">
+          <Flex className="flex items-center justify-between gap-x-[10px]">
             <Dropdown className="relative" dropRef={categoryRef}>
               <div className="flex cursor-pointer items-center justify-between gap-x-2">
                 <RiBarChartHorizontalLine />
-                <span className="font-dm text-sm font-normal text-primary">
+                <span className="hidden font-dm text-sm font-normal text-primary lg:inline-block">
                   Shop by Category
                 </span>
               </div>
 
               {categoryDropdownShow && (
-                <List className="absolute top-8 z-10 w-[263px] bg-primary">
+                <List className="absolute top-9 z-10 w-[263px] bg-primary">
                   <ListItem
                     className="border-b-[1px] border-rare px-5 py-3.5 font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Accesories"
@@ -87,22 +87,22 @@ const Header = () => {
 
             <div className="relative w-[601px]">
               <Search
-                className="w-full py-[16px] px-[21px] font-dm text-sm font-normal text-secondary placeholder:text-dope"
+                className="w-full py-2 px-3 font-dm text-sm font-normal text-secondary placeholder:text-dope lg:py-[12px] lg:px-[21px]"
                 placeholder="Search Product"
               />
 
               <FaSearch className="absolute top-[50%] right-[21px] -translate-y-2/4" />
             </div>
 
-            <Flex className="flex items-center justify-between gap-x-10">
+            <Flex className="flex items-center justify-between gap-x-2 lg:gap-x-4 2xl:gap-x-10">
               <Dropdown className="relative" dropRef={userRef}>
-                <div className="flex cursor-pointer items-center justify-between gap-x-1">
+                <div className="flex cursor-pointer items-center justify-between gap-x-0 lg:gap-x-1">
                   <FaUserAlt className="w-[13px]" />
                   <RxTriangleDown />
                 </div>
 
                 {userDropdownShow && (
-                  <List className="absolute top-8 right-0 z-10 w-[200px] bg-pure">
+                  <List className="absolute top-9 right-0 z-10 w-[200px] bg-pure">
                     <ListItem
                       className="cursor-pointer border-x-[1px] border-t border-b border-smoke py-[14px] px-[58px] text-center font-dm text-sm font-normal text-primary transition-all duration-150 ease-linear hover:border-transparent hover:bg-caret hover:font-bold hover:text-pure"
                       item="My Account"
@@ -119,7 +119,7 @@ const Header = () => {
                 <FaShoppingCart className="w-[17px] cursor-pointer" />
 
                 {cartDropdownShow && (
-                  <div className="absolute top-8 right-0 z-10 w-[360px] border border-solid border-smoke">
+                  <div className="absolute top-9 right-0 z-10 w-[360px] border border-solid border-smoke">
                     <Flex className="flex items-center justify-between bg-flat p-5">
                       <Flex className="flex items-center gap-x-5">
                         <Image
