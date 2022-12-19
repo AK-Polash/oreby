@@ -11,20 +11,20 @@ const AdditionalInfo = () => {
       <Container>
         <Flex className="flex items-center justify-between gap-x-3 lg:py-4 2xl:py-7">
           <Flex className="flex flex-col items-center justify-between gap-y-1 text-center lg:flex-row lg:gap-x-4 ">
-            <RiNumber2 className="text-xl lg:text-2xl" />
-            <p className="font-dm text-sm font-normal text-valin lg:text-base">
+            <RiNumber2 className="text-xs lg:text-2xl" />
+            <p className="font-dm text-[10px] font-normal text-valin lg:text-base">
               Two years warranty
             </p>
           </Flex>
           <Flex className="flex flex-col items-center justify-between gap-y-1 text-center lg:flex-row lg:gap-x-4 ">
-            <FaCaravan className="text-xl lg:text-2xl" />
-            <p className="font-dm text-sm font-normal text-valin lg:text-base">
+            <FaCaravan className="text-xs lg:text-2xl" />
+            <p className="font-dm text-[10px] font-normal text-valin lg:text-base">
               Free shipping
             </p>
           </Flex>
           <Flex className="flex flex-col items-center justify-between gap-y-1 text-center lg:flex-row lg:gap-x-4 ">
-            <RxReload className="text-xl lg:text-2xl" />
-            <p className="font-dm text-sm font-normal text-valin lg:text-base">
+            <RxReload className="text-xs lg:text-2xl" />
+            <p className="font-dm text-[10px] font-normal text-valin lg:text-base">
               Return policy in 30 days
             </p>
           </Flex>
