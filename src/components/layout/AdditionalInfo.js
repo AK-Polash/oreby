@@ -7,7 +7,7 @@ import { RxReload } from "react-icons/rx";
 
 const AdditionalInfo = () => {
   return (
-    <div className="mt-[-6px] border-2 border-solid border-smoke">
+    <div className="mt-[-6px] border-t-[1px] border-b-[1px] border-solid border-smoke lg:border-t-2 lg:border-b-2">
       <Container>
         <Flex className="flex items-center justify-between gap-x-3 lg:py-4 2xl:py-7">
           <Flex className="flex flex-col items-center justify-between gap-y-1 text-center lg:flex-row lg:gap-x-4 ">
