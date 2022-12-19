@@ -20,6 +20,7 @@ module.exports = {
         rare: "#2D2D2D",
         caret: "#2b2b2b",
         smoke: "#f0f0f0",
+        valin: "#6D6D6D",
       },
     },
   },

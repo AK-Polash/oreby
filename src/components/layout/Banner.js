@@ -118,14 +118,14 @@ const Banner = () => {
         <Link to="#">
           <div className="w-full">
             <Image
-              className="w-full"
+              className="block h-full w-full"
               source="assets/banner_one.png"
               alt="banner one"
             />
           </div>
         </Link>
         <Link to="#">
-          <div className="w-full">
+          <div className="block h-full w-full">
             <Image
               className="w-full"
               source="assets/banner_one.png"
@@ -136,7 +136,7 @@ const Banner = () => {
         <Link to="#">
           <div className="w-full">
             <Image
-              className="w-full"
+              className="block h-full w-full"
               source="assets/banner_one.png"
               alt="banner three"
             />
