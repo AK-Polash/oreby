@@ -5,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
 const Banner = () => {
-  let [dotActive, setDotActive] = useState("");
+  let [dotActive, setDotActive] = useState(0);
 
   const settings = {
     dots: true,
@@ -14,18 +14,14 @@ const Banner = () => {
     },
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3200,
+    autoplaySpeed: 3500,
     infinite: true,
     cssEase: "linear",
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     appendDots: (dots) => (
-      <div
-        style={{
-          backgroundColor: "gray",
-        }}
-      >
+      <div>
         <ul
           style={{
             position: "absolute",
@@ -65,6 +61,55 @@ const Banner = () => {
         0{i + 1}
       </div>
     ),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          appendDots: (dots) => (
+            <div>
+              <ul
+                style={{
+                  position: "absolute",
+                  top: "50%",
+                  left: "5%",
+                  transform: "translateY(-50%)",
+                }}
+              >
+                {dots}
+              </ul>
+            </div>
+          ),
+          customPaging: (i) => (
+            <div
+              style={
+                i == dotActive
+                  ? {
+                      width: "22px",
+                      color: "#262626",
+                      borderRight: "2px solid #262626",
+                      fontFamily: "DM Sans",
+                      fontSize: "10px",
+                      cursor: "pointer",
+                    }
+                  : {
+                      width: "22px",
+                      color: "transparent",
+                      borderRight: "2px solid #fff",
+                      fontFamily: "DM Sans",
+                      fontSize: "10px",
+                      cursor: "pointer",
+                    }
+              }
+            >
+              0{i + 1}
+            </div>
+          ),
+        },
+      },
+    ],
   };
 
   return (
