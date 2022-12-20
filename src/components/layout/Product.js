@@ -23,7 +23,7 @@ const Product = ({
         <Image className={imgClass} source={src} alt={alt} />
         {badgeShow && <Badge title={badgeTitle} />}
 
-        <div className="absolute bottom-[-60%] left-0 w-full bg-red-400 py-[25px] px-[30px] transition-all duration-150 ease-linear group-hover:bottom-0">
+        <div className="absolute bottom-[-80%] left-0 w-full bg-pure py-[25px] px-[30px] transition-all duration-150 ease-linear group-hover:bottom-0">
           <Link
             className="group/link inline-flex w-full items-center justify-end gap-x-[15px]"
             to="#"
