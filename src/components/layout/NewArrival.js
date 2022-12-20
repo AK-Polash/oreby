@@ -7,12 +7,15 @@ import Product from "./Product";
 
 const NewArrival = () => {
   return (
-    <div className="w-full pt-32">
+    <div className="w-full md:pt-6 xl:pt-14 2xl:pt-32">
       <Container>
-        <Heading title="new arrival" />
-        <Flex className="flex items-center justify-between gap-x-10">
+        <Heading
+          className="pb-2 font-dm text-xl font-bold capitalize text-primary md:pb-6 md:text-2xl xl:pb-9 xl:text-[39px] 2xl:pb-12"
+          title="new arrival"
+        />
+        <Flex className="flex flex-wrap items-center justify-between gap-x-10 lg:flex-nowrap">
           <Product
-            className="max-w-[370px]"
+            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-lg:max-w-[215px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n1.png"
             alt="new_arrival_1"
@@ -23,7 +26,7 @@ const NewArrival = () => {
             productColor="Black"
           />
           <Product
-            className="max-w-[370px]"
+            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-lg:max-w-[215px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n2.png"
             alt="new_arrival_2"
@@ -34,7 +37,7 @@ const NewArrival = () => {
             productColor="Green"
           />
           <Product
-            className="max-w-[370px]"
+            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-lg:max-w-[215px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n3.png"
             alt="new_arrival_3"
@@ -45,7 +48,7 @@ const NewArrival = () => {
             productColor="Blue"
           />
           <Product
-            className="max-w-[370px]"
+            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-lg:max-w-[215px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n4.png"
             alt="new_arrival_4"
