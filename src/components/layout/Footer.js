@@ -17,26 +17,31 @@ const Footer = () => {
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Home"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Shop"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="About"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Contact"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Journal1"
                 href="#"
+                linkStyle="inline-block"
               />
             </List>
           </div>
@@ -47,26 +52,31 @@ const Footer = () => {
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Category 1"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Category 2"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Category 3"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Category 4"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Category 5"
                 href="#"
+                linkStyle="inline-block"
               />
             </List>
           </div>
@@ -77,26 +87,31 @@ const Footer = () => {
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Privacy Policy"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Terms & Conditions"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Special E-shop"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Shipping"
                 href="#"
+                linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-sm font-normal text-valin"
                 item="Secure Payments"
                 href="#"
+                linkStyle="inline-block"
               />
             </List>
           </div>
