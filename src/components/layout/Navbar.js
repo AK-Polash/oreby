@@ -42,22 +42,32 @@ const Navbar = () => {
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="Home"
+                  href="#"
+                  linkStyle="inline-block"
                 />
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="Shop"
+                  href="#"
+                  linkStyle="inline-block"
                 />
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="About"
+                  href="#"
+                  linkStyle="inline-block"
                 />
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="Contacts"
+                  href="#"
+                  linkStyle="inline-block"
                 />
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="Journal"
+                  href="#"
+                  linkStyle="inline-block"
                 />
               </List>
             </div>

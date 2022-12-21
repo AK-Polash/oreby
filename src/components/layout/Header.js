@@ -58,28 +58,40 @@ const Header = () => {
               {categoryDropdownShow && (
                 <List className="absolute top-9 z-10 w-[263px] bg-primary">
                   <ListItem
-                    className="border-b-[1px] border-rare px-5 py-3.5 font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
+                    className="border-b-[1px] border-rare font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Accesories"
+                    href="#"
+                    linkStyle="px-5 py-3.5 block"
                   />
                   <ListItem
-                    className="border-b-[1px] border-rare px-5 py-3.5 font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
+                    className="border-b-[1px] border-rare font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Furniture"
+                    href="#"
+                    linkStyle="px-5 py-3.5 block"
                   />
                   <ListItem
-                    className="border-b-[1px] border-rare px-5 py-3.5 font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
+                    className="border-b-[1px] border-rare font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Electronics"
+                    href="#"
+                    linkStyle="px-5 py-3.5 block"
                   />
                   <ListItem
-                    className="border-b-[1px] border-rare px-5 py-3.5 font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
+                    className="border-b-[1px] border-rare font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Clothes"
+                    href="#"
+                    linkStyle="px-5 py-3.5 block"
                   />
                   <ListItem
-                    className="border-b-[1px] border-rare px-5 py-3.5 font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
+                    className="border-b-[1px] border-rare font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Bags"
+                    href="#"
+                    linkStyle="px-5 py-3.5 block"
                   />
                   <ListItem
-                    className="border-b-[1px] border-rare px-5 py-3.5 font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
+                    className="border-b-[1px] border-rare font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Home appliances"
+                    href="#"
+                    linkStyle="px-5 py-3.5 block"
                   />
                 </List>
               )}
@@ -104,12 +116,16 @@ const Header = () => {
                 {userDropdownShow && (
                   <List className="absolute top-9 right-0 z-10 w-[200px] bg-pure">
                     <ListItem
-                      className="cursor-pointer border-x-[1px] border-t border-b border-smoke py-[14px] px-[58px] text-center font-dm text-sm font-normal text-primary transition-all duration-150 ease-linear hover:border-transparent hover:bg-caret hover:font-bold hover:text-pure"
+                      className="cursor-pointer border-x-[1px] border-t border-b border-smoke text-center font-dm text-sm font-normal text-primary transition-all duration-150 ease-linear hover:border-transparent hover:bg-caret hover:font-bold hover:text-pure"
                       item="My Account"
+                      href="#"
+                      linkStyle="py-[14px] px-[58px] block"
                     />
                     <ListItem
-                      className="cursor-pointer border-x-[1px] border-b border-smoke py-[14px] px-[58px] text-center font-dm text-sm font-normal text-primary transition-all duration-150 ease-linear hover:border-transparent hover:bg-caret hover:font-bold hover:text-pure"
+                      className="cursor-pointer border-x-[1px] border-b border-smoke text-center font-dm text-sm font-normal text-primary transition-all duration-150 ease-linear hover:border-transparent hover:bg-caret hover:font-bold hover:text-pure"
                       item="Log Out"
+                      href="#"
+                      linkStyle="py-[14px] px-[58px] block"
                     />
                   </List>
                 )}
