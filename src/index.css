@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-slider {
+  overflow: hidden;
+}
+.slick-list {
+  margin: 0 -20px;
+}

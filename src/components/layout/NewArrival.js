@@ -12,14 +12,14 @@ import "slick-carousel/slick/slick.css";
 
 const NewArrival = () => {
   function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, style, onClick, width, height } = props;
     return (
       <div
         className={className}
         style={{
           ...style,
-          width: "67px",
-          height: "67px",
+          width: width,
+          height: height,
           borderRadius: "50%",
           background: "#c7c7c7",
           cursor: "pointer",
@@ -40,14 +40,14 @@ const NewArrival = () => {
   }
 
   function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { className, style, onClick, width, height } = props;
     return (
       <div
         className={className}
         style={{
           ...style,
-          width: "67px",
-          height: "67px",
+          width: width,
+          height: height,
           borderRadius: "50%",
           background: "#c7c7c7",
           cursor: "pointer",
@@ -79,31 +79,59 @@ const NewArrival = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow width="67px" height="67px" />,
+    prevArrow: <SamplePrevArrow width="67px" height="67px" />,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1281,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 4,
+          slidesToScroll: 1,
           infinite: true,
           dots: false,
+          nextArrow: <SampleNextArrow width="50px" height="50px" />,
+          prevArrow: <SamplePrevArrow width="50px" height="50px" />,
+        },
+      },
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          nextArrow: <SampleNextArrow width="40px" height="40px" />,
+          prevArrow: <SamplePrevArrow width="40px" height="40px" />,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+          nextArrow: <SampleNextArrow width="40px" height="40px" />,
+          prevArrow: <SamplePrevArrow width="40px" height="40px" />,
         },
       },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
+          nextArrow: <SampleNextArrow width="30px" height="30px" />,
+          prevArrow: <SamplePrevArrow width="30px" height="30px" />,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 401,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          nextArrow: <SampleNextArrow width="30px" height="30px" />,
+          prevArrow: <SamplePrevArrow width="30px" height="30px" />,
         },
       },
     ],
@@ -117,12 +145,9 @@ const NewArrival = () => {
           title="new arrival"
         />
 
-        <Slider
-          {...settings}
-          className="realtive flex w-full flex-wrap items-center justify-between !gap-x-10 lg:flex-nowrap"
-        >
+        <Slider {...settings} className="realtive w-full overflow-hidden">
           <Product
-            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
+            className="mx-auto px-3 sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:px-5 md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n1.png"
             alt="new_arrival_1"
@@ -132,8 +157,9 @@ const NewArrival = () => {
             productPrice="$44.00"
             productColor="Black"
           />
+
           <Product
-            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
+            className="mx-auto px-3 sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:px-5 md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n2.png"
             alt="new_arrival_2"
@@ -143,8 +169,9 @@ const NewArrival = () => {
             productPrice="$89.00"
             productColor="Green"
           />
+
           <Product
-            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
+            className="mx-auto px-3 sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:px-5 md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n3.png"
             alt="new_arrival_3"
@@ -154,8 +181,9 @@ const NewArrival = () => {
             productPrice="$54.00"
             productColor="Blue"
           />
+
           <Product
-            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
+            className="mx-auto px-3 sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:px-5 md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n4.png"
             alt="new_arrival_4"
@@ -165,8 +193,9 @@ const NewArrival = () => {
             productPrice="$85.00"
             productColor="Purple"
           />
+
           <Product
-            className="sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
+            className="mx-auto px-3 sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:px-5 md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
             imgClass="w-full"
             src="assets/n3.png"
             alt="new_arrival_3"
