@@ -17,8 +17,8 @@ const OfferProducts = () => {
           <Product
             className="sm:max-xl:mb-5 sm:max-md:max-w-[180px] md:max-xl:max-w-[215px] 2xl:max-w-[370px]"
             imgClass="w-full"
-            src="assets/n1.png"
-            alt="new_arrival_1"
+            src="assets/so1.png"
+            alt="special_offer_1"
             badgeShow={true}
             badgeTitle="New"
             productTitle="Basic Table Watch"
@@ -29,8 +29,8 @@ const OfferProducts = () => {
           <Product
             className="sm:max-xl:mb-5 sm:max-md:max-w-[180px] md:max-xl:max-w-[215px] 2xl:max-w-[370px]"
             imgClass="w-full"
-            src="assets/n2.png"
-            alt="new_arrival_2"
+            src="assets/so2.png"
+            alt="special_offer_2"
             badgeShow={true}
             badgeTitle="New"
             productTitle="Basic Crew Neck Tee"
@@ -41,8 +41,8 @@ const OfferProducts = () => {
           <Product
             className="sm:max-xl:mb-5 sm:max-md:max-w-[180px] md:max-xl:max-w-[215px] 2xl:max-w-[370px]"
             imgClass="w-full"
-            src="assets/n3.png"
-            alt="new_arrival_3"
+            src="assets/so3.png"
+            alt="special_offer_3"
             badgeShow={true}
             badgeTitle="New"
             productTitle="Basic Crew Neck Tee"
@@ -53,8 +53,8 @@ const OfferProducts = () => {
           <Product
             className="sm:max-xl:mb-5 sm:max-md:max-w-[180px] md:max-xl:max-w-[215px] 2xl:max-w-[370px]"
             imgClass="w-full"
-            src="assets/n4.png"
-            alt="new_arrival_4"
+            src="assets/so4.png"
+            alt="special_offer_4"
             badgeShow={false}
             badgeTitle="New"
             productTitle="Basic Crew Neck Tee"
