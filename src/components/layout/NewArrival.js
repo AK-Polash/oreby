@@ -4,7 +4,6 @@ import {
   HiOutlineArrowNarrowRight,
 } from "react-icons/hi";
 import Container from "./Container";
-import Flex from "./Flex";
 import Heading from "./Heading";
 import Product from "./Product";
 import Slider from "react-slick";
@@ -53,11 +52,6 @@ const NewArrival = () => {
           cursor: "pointer",
           position: "absolute",
           top: "50%",
-          right: "0",
-          transform: "translateY(-50%)",
-          zIndex: "5",
-          position: "absolute",
-          top: "50%",
           left: "0",
           transform: "translateY(-50%)",
           zIndex: "5",
@@ -75,6 +69,7 @@ const NewArrival = () => {
   const settings = {
     arrows: true,
     dots: false,
+    autoplay: true,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -89,6 +84,8 @@ const NewArrival = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
+          autoplay: true,
+          speed: 500,
           nextArrow: <SampleNextArrow width="50px" height="50px" />,
           prevArrow: <SamplePrevArrow width="50px" height="50px" />,
         },
@@ -100,6 +97,8 @@ const NewArrival = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
+          autoplay: true,
+          speed: 500,
           nextArrow: <SampleNextArrow width="40px" height="40px" />,
           prevArrow: <SamplePrevArrow width="40px" height="40px" />,
         },
@@ -111,6 +110,8 @@ const NewArrival = () => {
           slidesToScroll: 1,
           infinite: true,
           dots: false,
+          autoplay: true,
+          speed: 500,
           nextArrow: <SampleNextArrow width="40px" height="40px" />,
           prevArrow: <SamplePrevArrow width="40px" height="40px" />,
         },
@@ -121,6 +122,8 @@ const NewArrival = () => {
           slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 2,
+          autoplay: true,
+          speed: 500,
           nextArrow: <SampleNextArrow width="30px" height="30px" />,
           prevArrow: <SamplePrevArrow width="30px" height="30px" />,
         },
@@ -130,6 +133,8 @@ const NewArrival = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          autoplay: true,
+          speed: 500,
           nextArrow: <SampleNextArrow width="30px" height="30px" />,
           prevArrow: <SamplePrevArrow width="30px" height="30px" />,
         },
