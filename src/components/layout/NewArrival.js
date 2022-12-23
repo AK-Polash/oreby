@@ -116,7 +116,7 @@ const NewArrival = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          autoplay: false,
+          autoplay: true,
           speed: 500,
           appendDots: (dots) => (
             <div

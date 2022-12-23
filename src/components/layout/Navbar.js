@@ -42,13 +42,13 @@ const Navbar = () => {
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="Home"
-                  href="#"
+                  href="/"
                   linkStyle="inline-block"
                 />
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="Shop"
-                  href="#"
+                  href="/shop"
                   linkStyle="inline-block"
                 />
                 <ListItem
