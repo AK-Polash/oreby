@@ -9,125 +9,132 @@ const Footer = () => {
   return (
     <div className="mt-36 bg-[#F5F5F3] py-14">
       <Container>
-        <Flex className="flex">
-          <div className="w-[10%]">
-            <h4 className="mb-4 font-dm text-base font-bold">MENU</h4>
-            <List>
+        <Flex className="flex flex-wrap">
+          <div className="w-[26%] md:w-[13%] lg:w-[10%]">
+            <h4 className="font-dm text-sm font-bold md:text-base lg:mb-4">
+              MENU
+            </h4>
+            <List className="w-full">
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Home"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Shop"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="About"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Contact"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Journal1"
                 href="#"
                 linkStyle="inline-block"
               />
             </List>
           </div>
-          <div className="w-[10%]">
-            <h4 className="mb-4 font-dm text-base font-bold">SHOP</h4>
-            <List>
+          <div className="w-[32%] md:w-[17%] lg:w-[10%]">
+            <h4 className="font-dm text-sm font-bold md:text-base lg:mb-4">
+              SHOP
+            </h4>
+            <List className="w-full">
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Category 1"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Category 2"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Category 3"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Category 4"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Category 5"
                 href="#"
                 linkStyle="inline-block"
               />
             </List>
           </div>
-          <div className="w-[10%]">
-            <h4 className="mb-4 font-dm text-base font-bold">HELP</h4>
-            <List>
+          <div className="w-[42%] md:w-[23%] lg:w-[15%]">
+            <h4 className="font-dm text-sm font-bold md:text-base lg:mb-4">
+              HELP
+            </h4>
+            <List className="w-full">
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Privacy Policy"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Terms & Conditions"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Special E-shop"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Shipping"
                 href="#"
                 linkStyle="inline-block"
               />
               <ListItem
-                className="mt-[6px] font-dm text-sm font-normal text-valin"
+                className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="Secure Payments"
                 href="#"
                 linkStyle="inline-block"
               />
             </List>
           </div>
-          <div className="flex w-[30%] justify-center">
+          <div className="flex w-full py-4 md:w-[37%] md:py-0 lg:w-[30%] lg:justify-center">
             <div>
-              <h4 className="mb-4 font-dm text-base font-bold">
-                (052) 611-5711 <br /> company@domain.com
+              <h4 className="font-dm text-sm font-bold md:text-base lg:pb-4">
+                <span className="block">(052) 611-5711</span>
+                <span>company@domain.com</span>
               </h4>
-              <p className="mt-[6px] font-dm text-sm font-normal text-valin">
+              <p className="mt-[6px] font-dm text-[12px] font-normal text-valin md:text-sm">
                 575 Crescent Ave. Quakertown, PA 18951
               </p>
             </div>
           </div>
-          <div className="w-[40%]">
+          <div className="w-full md:w-[10%] lg:w-[35%] lg:py-0">
             <Image
-              className="w-[100px]"
+              className="block w-[60px] md:w-[100px]"
               source="assets/logo.png"
               alt="footer logo"
             />
