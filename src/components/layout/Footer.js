@@ -4,6 +4,8 @@ import Flex from "./Flex";
 import List from "./List";
 import ListItem from "./ListItem";
 import Image from "./Image";
+import { Link } from "react-router-dom";
+import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -140,6 +142,22 @@ const Footer = () => {
             />
           </div>
         </Flex>
+        <footer className=" flex flex-wrap items-center justify-between pt-[50px]">
+          <Flex className="flex w-[92px] justify-between">
+            <Link to="#">
+              <FaFacebookF />
+            </Link>
+            <Link to="#">
+              <FaLinkedinIn />
+            </Link>
+            <Link to="#">
+              <FaInstagram />
+            </Link>
+          </Flex>
+          <span className="pt-[10px] font-dm text-[12px] font-normal text-valin md:pt-0 md:text-sm">
+            2020 Orebi Minimal eCommerce Figma Template by Adveits
+          </span>
+        </footer>
       </Container>
     </div>
   );
