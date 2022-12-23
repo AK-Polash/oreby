@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   HiOutlineArrowNarrowLeft,
   HiOutlineArrowNarrowRight,
@@ -66,6 +66,8 @@ const NewArrival = () => {
     );
   }
 
+  let [arrivalActiveDot, setArrivalActiveDot] = useState(0);
+
   const settings = {
     arrows: true,
     dots: false,
@@ -106,37 +108,183 @@ const NewArrival = () => {
       {
         breakpoint: 769,
         settings: {
+          arrows: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setArrivalActiveDot(next);
+          },
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: false,
-          autoplay: true,
+          autoplay: false,
           speed: 500,
-          nextArrow: <SampleNextArrow width="40px" height="40px" />,
-          prevArrow: <SamplePrevArrow width="40px" height="40px" />,
+          appendDots: (dots) => (
+            <div
+              style={{
+                backgroundColor: "transparent",
+                position: "absolute",
+                bottom: 0,
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 10,
+              }}
+            >
+              <ul
+                style={{
+                  margin: "0px",
+                  display: "flex",
+                  justifyContent: "center",
+                  columnGap: "6px",
+                }}
+              >
+                {dots}
+              </ul>
+            </div>
+          ),
+          customPaging: (i) => (
+            <div
+              style={
+                i === arrivalActiveDot
+                  ? {
+                      width: "33px",
+                      height: "10px",
+                      background: "#222",
+                      borderRadius: "10px",
+                      cursor: "pointer",
+                      transition: "all linear 0.17s",
+                    }
+                  : {
+                      width: "10px",
+                      height: "10px",
+                      background: "#999",
+                      borderRadius: "50%",
+                      cursor: "pointer",
+                      transition: "all linear 0.17s",
+                    }
+              }
+            ></div>
+          ),
         },
       },
       {
         breakpoint: 600,
         settings: {
+          arrows: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setArrivalActiveDot(next);
+          },
           slidesToShow: 2,
           slidesToScroll: 1,
           initialSlide: 2,
           autoplay: true,
           speed: 500,
-          nextArrow: <SampleNextArrow width="30px" height="30px" />,
-          prevArrow: <SamplePrevArrow width="30px" height="30px" />,
+          appendDots: (dots) => (
+            <div
+              style={{
+                backgroundColor: "transparent",
+                position: "absolute",
+                bottom: 0,
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 10,
+              }}
+            >
+              <ul
+                style={{
+                  margin: "0px",
+                  display: "flex",
+                  justifyContent: "center",
+                  columnGap: "6px",
+                }}
+              >
+                {dots}
+              </ul>
+            </div>
+          ),
+          customPaging: (i) => (
+            <div
+              style={
+                i === arrivalActiveDot
+                  ? {
+                      width: "33px",
+                      height: "10px",
+                      background: "#222",
+                      borderRadius: "10px",
+                      cursor: "pointer",
+                      transition: "all linear 0.17s",
+                    }
+                  : {
+                      width: "10px",
+                      height: "10px",
+                      background: "#999",
+                      borderRadius: "50%",
+                      cursor: "pointer",
+                      transition: "all linear 0.17s",
+                    }
+              }
+            ></div>
+          ),
         },
       },
       {
         breakpoint: 401,
         settings: {
+          arrows: false,
+          dots: true,
+          beforeChange: (prev, next) => {
+            setArrivalActiveDot(next);
+          },
           slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: true,
           speed: 500,
-          nextArrow: <SampleNextArrow width="30px" height="30px" />,
-          prevArrow: <SamplePrevArrow width="30px" height="30px" />,
+          appendDots: (dots) => (
+            <div
+              style={{
+                backgroundColor: "transparent",
+                position: "absolute",
+                bottom: 0,
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 10,
+              }}
+            >
+              <ul
+                style={{
+                  margin: "0px",
+                  display: "flex",
+                  justifyContent: "center",
+                  columnGap: "6px",
+                }}
+              >
+                {dots}
+              </ul>
+            </div>
+          ),
+          customPaging: (i) => (
+            <div
+              style={
+                i === arrivalActiveDot
+                  ? {
+                      width: "33px",
+                      height: "10px",
+                      background: "#222",
+                      borderRadius: "10px",
+                      cursor: "pointer",
+                      transition: "all linear 0.17s",
+                    }
+                  : {
+                      width: "10px",
+                      height: "10px",
+                      background: "#999",
+                      borderRadius: "50%",
+                      cursor: "pointer",
+                      transition: "all linear 0.17s",
+                    }
+              }
+            ></div>
+          ),
         },
       },
     ],
@@ -150,7 +298,10 @@ const NewArrival = () => {
           title="new arrival"
         />
 
-        <Slider {...settings} className="realtive w-full overflow-hidden">
+        <Slider
+          {...settings}
+          className="realtive w-full overflow-hidden pb-6 lg:pb-0"
+        >
           <Product
             className="mx-auto px-3 sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:px-5 md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
             imgClass="w-full"
