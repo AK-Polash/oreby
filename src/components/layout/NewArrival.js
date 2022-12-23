@@ -300,7 +300,7 @@ const NewArrival = () => {
 
         <Slider
           {...settings}
-          className="realtive w-full overflow-hidden pb-6 lg:pb-0"
+          className="realtive w-full overflow-hidden pb-3 md:pb-4 lg:pb-0"
         >
           <Product
             className="mx-auto px-3 sm:max-xl:mb-5 sm:max-md:max-w-[200px] md:px-5 md:max-xl:max-w-[230px] 2xl:max-w-[370px]"
