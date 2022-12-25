@@ -137,7 +137,7 @@ const Footer = () => {
           <div className="w-full md:w-[10%] lg:w-[35%] lg:py-0">
             <Image
               className="block w-[60px] md:w-[100px]"
-              source="assets/logo.png"
+              source="assets/logo__footer.png"
               alt="footer logo"
             />
           </div>
