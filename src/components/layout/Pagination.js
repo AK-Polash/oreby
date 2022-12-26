@@ -54,7 +54,7 @@ const Pagination = ({ itemsPerPage }) => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-between gap-x-10">
+      <div className="flex flex-wrap justify-between xl:gap-x-10">
         <Items currentItems={currentItems} />
       </div>
 

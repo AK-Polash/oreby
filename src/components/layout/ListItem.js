@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const ListItem = ({ item, className, href, linkStyle }) => {
   return (
     <li className={className}>
-      <Link className={linkStyle} to={href}>
+      <NavLink className={linkStyle} to={href}>
         {item}
-      </Link>
+      </NavLink>
     </li>
   );
 };

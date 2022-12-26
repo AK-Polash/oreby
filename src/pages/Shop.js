@@ -12,8 +12,8 @@ const Shop = () => {
       <Container>
         <Bredcrumb title="Products" />
 
-        <Flex className="flex gap-x-10">
-          <div className="w-[20%] bg-red-400">left part</div>
+        <Flex className="flex gap-x-3 md:gap-x-5 xl:gap-x-10">
+          <div className="w-[20%] bg-red-400"> left part </div>
           <div className="relative w-[80%]">
             <Pagination itemsPerPage={12} />
           </div>
