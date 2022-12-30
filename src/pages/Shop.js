@@ -36,29 +36,28 @@ const Shop = () => {
                     className="hidden font-dm text-sm font-normal text-secondary md:block lg:text-base"
                     labelText="Sort by:"
                   />
-
                   <Select
                     id="category"
                     className="block cursor-pointer border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
                     <SelectOption
                       optionValue="featured"
-                      className="w-full"
+                      className="bg-[#999] text-pure"
                       optionText="Featured"
                     />
                     <SelectOption
                       optionValue="newArrival"
-                      className="w-full"
+                      className="bg-[#999] text-pure"
                       optionText="New Arrival"
                     />
                     <SelectOption
                       optionValue="bestSeller"
-                      className="w-full"
+                      className="bg-[#999] text-pure"
                       optionText="Best Seller"
                     />
                     <SelectOption
                       optionValue="specialOffer"
-                      className="w-full"
+                      className="bg-[#999] text-pure"
                       optionText="Special Offer"
                     />
                   </Select>
@@ -70,24 +69,23 @@ const Shop = () => {
                     className="hidden font-dm text-sm font-normal text-secondary md:block lg:text-base"
                     labelText="Show:"
                   />
-
                   <Select
                     id="show"
                     className="block cursor-pointer border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
                     <SelectOption
                       optionValue="12"
-                      className="w-full"
+                      className="bg-[#999] text-pure"
                       optionText="12"
                     />
                     <SelectOption
                       optionValue="24"
-                      className="w-full"
+                      className="bg-[#999] text-pure"
                       optionText="24"
                     />
                     <SelectOption
                       optionValue="48"
-                      className="w-full"
+                      className="bg-[#999] text-pure"
                       optionText="48"
                     />
                   </Select>

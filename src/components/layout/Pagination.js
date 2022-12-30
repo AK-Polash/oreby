@@ -71,11 +71,11 @@ const Pagination = ({ itemsPerPage }) => {
           pageCount={pageCount}
           renderOnZeroPageCount={null}
           containerClassName="flex flex-wrap gap-y-[10px] gap-x-3.5"
-          pageClassName="w-9 h-9 leading-9 text-center border border-solid border-smoke font-dm font-normal text-sm text-secondary"
+          pageClassName="w-7 h-7 leading-7 lg:w-9 lg:h-9 lg:leading-9 text-center border border-solid border-smoke font-dm font-normal text-sm text-secondary"
           pageLinkClassName="inline-block w-full h-full"
           previousClassName="hidden"
           nextClassName="hidden"
-          activeClassName="w-9 h-9 leading-9 text-center border border-solid border-transparent font-dm font-normal text-sm !text-pure bg-primary"
+          activeClassName="w-7 h-7 leading-7 lg:w-9 lg:h-9 lg:leading-9 text-center border border-solid border-transparent font-dm font-normal text-sm !text-pure bg-primary"
         />
 
         <p className="py-2 font-dm text-xs font-normal text-secondary lg:text-sm xl:absolute xl:bottom-0 xl:right-0">
