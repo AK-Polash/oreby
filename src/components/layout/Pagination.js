@@ -17,10 +17,13 @@ function Items({ currentItems }) {
   return (
     <>
       {currentItems &&
-        currentItems.map((item) => (
-          <div className="w-[30%]">
+        currentItems.map((item, index) => (
+          <div
+            key={index}
+            className="w-full sm:w-[47%] md:w-[31.7%] lg:w-[30%]"
+          >
             <Product
-              className="mb-12 w-full"
+              className="mb-9 w-full lg:mb-12"
               imgClass="w-full"
               src="assets/so1.png"
               alt="special_offer_1"
@@ -54,29 +57,31 @@ const Pagination = ({ itemsPerPage }) => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-between xl:gap-x-10">
+      <div className="sm:flex sm:flex-wrap sm:justify-between xl:gap-x-10">
         <Items currentItems={currentItems} />
       </div>
 
-      <ReactPaginate
-        breakLabel="..."
-        breakClassName="w-9 h-9 text-center"
-        breakLinkClassName="inline-block w-full h-full leading-9 text-secondary"
-        onPageChange={handlePageClick}
-        pageRangeDisplayed={4}
-        pageCount={pageCount}
-        renderOnZeroPageCount={null}
-        containerClassName="flex gap-x-3.5"
-        pageClassName="w-9 h-9 leading-9 text-center border border-solid border-smoke font-dm font-normal text-sm text-secondary"
-        pageLinkClassName="inline-block w-full h-full"
-        previousClassName="hidden"
-        nextClassName="hidden"
-        activeClassName="w-9 h-9 leading-9 text-center border border-solid border-transparent font-dm font-normal text-sm !text-pure bg-primary"
-      />
+      <div className="flex flex-wrap items-center justify-between gap-x-6">
+        <ReactPaginate
+          breakLabel="..."
+          breakClassName="w-9 h-9 text-center"
+          breakLinkClassName="inline-block w-full h-full leading-9 text-secondary"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={4}
+          pageCount={pageCount}
+          renderOnZeroPageCount={null}
+          containerClassName="flex flex-wrap gap-y-[10px] gap-x-3.5"
+          pageClassName="w-9 h-9 leading-9 text-center border border-solid border-smoke font-dm font-normal text-sm text-secondary"
+          pageLinkClassName="inline-block w-full h-full"
+          previousClassName="hidden"
+          nextClassName="hidden"
+          activeClassName="w-9 h-9 leading-9 text-center border border-solid border-transparent font-dm font-normal text-sm !text-pure bg-primary"
+        />
 
-      <p className="absolute bottom-0 right-0 py-2 font-dm text-sm font-normal text-secondary">
-        Products from {itemOffset} to {endOffset} of {items.length}
-      </p>
+        <p className="bottom-0 right-0 py-2 font-dm text-xs font-normal text-secondary lg:text-sm xl:absolute">
+          Products from {itemOffset} to {endOffset} of {items.length}
+        </p>
+      </div>
     </>
   );
 };
