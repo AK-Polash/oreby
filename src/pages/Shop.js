@@ -8,6 +8,7 @@ import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 import { FaList } from "react-icons/fa";
 import Select from "../components/layout/Select";
 import SelectOption from "../components/layout/SelectOption";
+import Label from "../components/layout/Label";
 
 const Shop = () => {
   // let params = useParams();
@@ -30,16 +31,15 @@ const Shop = () => {
               </Flex>
               <Flex className="flex flex-wrap items-center justify-between gap-y-2 gap-x-1.5 lg:gap-x-10 lg:gap-y-0">
                 <Flex className="flex items-center justify-between gap-x-1 lg:gap-x-4">
-                  <label
+                  <Label
                     htmlFor="category"
                     className="hidden font-dm text-sm font-normal text-secondary md:block lg:text-base"
-                  >
-                    Sort by:
-                  </label>
+                    labelText="Sort by:"
+                  />
 
                   <Select
                     id="category"
-                    className="block border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
+                    className="block cursor-pointer border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
                     <SelectOption
                       optionValue="featured"
@@ -65,16 +65,15 @@ const Shop = () => {
                 </Flex>
 
                 <Flex className="flex items-center justify-between gap-x-1 lg:gap-x-4">
-                  <label
+                  <Label
                     htmlFor="show"
                     className="hidden font-dm text-sm font-normal text-secondary md:block lg:text-base"
-                  >
-                    Show:
-                  </label>
+                    labelText="Show:"
+                  />
 
                   <Select
                     id="show"
-                    className="block border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
+                    className="block cursor-pointer border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
                     <SelectOption
                       optionValue="12"
