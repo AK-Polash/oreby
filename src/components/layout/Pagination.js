@@ -78,7 +78,7 @@ const Pagination = ({ itemsPerPage }) => {
           activeClassName="w-9 h-9 leading-9 text-center border border-solid border-transparent font-dm font-normal text-sm !text-pure bg-primary"
         />
 
-        <p className="bottom-0 right-0 py-2 font-dm text-xs font-normal text-secondary lg:text-sm xl:absolute">
+        <p className="py-2 font-dm text-xs font-normal text-secondary lg:text-sm xl:absolute xl:bottom-0 xl:right-0">
           Products from {itemOffset} to {endOffset} of {items.length}
         </p>
       </div>
