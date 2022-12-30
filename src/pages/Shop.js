@@ -6,6 +6,8 @@ import Flex from "../components/layout/Flex";
 import Pagination from "../components/layout/Pagination";
 import { TfiLayoutGrid2Alt } from "react-icons/tfi";
 import { FaList } from "react-icons/fa";
+import Select from "../components/layout/Select";
+import SelectOption from "../components/layout/SelectOption";
 
 const Shop = () => {
   // let params = useParams();
@@ -35,15 +37,31 @@ const Shop = () => {
                     Sort by:
                   </label>
 
-                  <select
+                  <Select
                     id="category"
                     className="block border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
-                    <option selected>Featured</option>
-                    <option value="newArrival">New Arrival</option>
-                    <option value="bestSeller">Best Seller</option>
-                    <option value="specialOffer">Special Offer</option>
-                  </select>
+                    <SelectOption
+                      optionValue="featured"
+                      className="w-full"
+                      optionText="Featured"
+                    />
+                    <SelectOption
+                      optionValue="newArrival"
+                      className="w-full"
+                      optionText="New Arrival"
+                    />
+                    <SelectOption
+                      optionValue="bestSeller"
+                      className="w-full"
+                      optionText="Best Seller"
+                    />
+                    <SelectOption
+                      optionValue="specialOffer"
+                      className="w-full"
+                      optionText="Special Offer"
+                    />
+                  </Select>
                 </Flex>
 
                 <Flex className="flex items-center justify-between gap-x-1 lg:gap-x-4">
@@ -54,14 +72,26 @@ const Shop = () => {
                     Show:
                   </label>
 
-                  <select
+                  <Select
                     id="show"
                     className="block border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
-                    <option selected>12</option>
-                    <option value="newArrival">24</option>
-                    <option value="bestSeller">36</option>
-                  </select>
+                    <SelectOption
+                      optionValue="12"
+                      className="w-full"
+                      optionText="12"
+                    />
+                    <SelectOption
+                      optionValue="24"
+                      className="w-full"
+                      optionText="24"
+                    />
+                    <SelectOption
+                      optionValue="48"
+                      className="w-full"
+                      optionText="48"
+                    />
+                  </Select>
                 </Flex>
               </Flex>
             </Flex>
