@@ -75,7 +75,7 @@ const Shop = () => {
                     labelText="Show:"
                   />
                   <Select
-                    onChange={(e) => setProductShow(e.target.value)}
+                    onChange={(e) => setProductShow(+e.target.value)}
                     id="show"
                     className="block cursor-pointer border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
