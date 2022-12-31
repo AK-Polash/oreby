@@ -12,7 +12,20 @@ import Label from "../components/layout/Label";
 
 const Shop = () => {
   // let params = useParams();
-  let [productShow, setProductShow] = useState(6);
+  let showOptions = [
+    { optionValue: 12, optionText: 12 },
+    { optionValue: 24, optionText: 24 },
+    { optionValue: 48, optionText: 48 },
+  ];
+
+  let [productShow, setProductShow] = useState(12);
+
+  let sortOptions = [
+    { optionValue: "featured", optionText: "Featured" },
+    { optionValue: "newArrival", optionText: "New Arrival" },
+    { optionValue: "bestSeller", optionText: "Best Seller" },
+    { optionValue: "specialOffer", optionText: "Special Offer" },
+  ];
 
   return (
     <div className="w-full">
@@ -21,6 +34,7 @@ const Shop = () => {
 
         <Flex className="flex gap-x-3 md:gap-x-5 xl:gap-x-10">
           <div className="w-[20%] bg-red-400"> left part </div>
+
           <div className="relative w-[80%]">
             <Flex className="flex flex-wrap items-center justify-between gap-y-2 pb-8 lg:gap-y-0 lg:pb-10 xl:pb-[60px]">
               <Flex className="flex items-center gap-x-1.5 lg:gap-x-5">
@@ -39,29 +53,18 @@ const Shop = () => {
                     labelText="Sort by:"
                   />
                   <Select
+                    // onChange={}
                     id="category"
                     className="block cursor-pointer border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
-                    <SelectOption
-                      optionValue="featured"
-                      className="bg-[#999] text-pure"
-                      optionText="Featured"
-                    />
-                    <SelectOption
-                      optionValue="newArrival"
-                      className="bg-[#999] text-pure"
-                      optionText="New Arrival"
-                    />
-                    <SelectOption
-                      optionValue="bestSeller"
-                      className="bg-[#999] text-pure"
-                      optionText="Best Seller"
-                    />
-                    <SelectOption
-                      optionValue="specialOffer"
-                      className="bg-[#999] text-pure"
-                      optionText="Special Offer"
-                    />
+                    {sortOptions.map((option, index) => (
+                      <SelectOption
+                        key={index}
+                        optionValue={option.optionValue}
+                        className="bg-[#999] text-pure"
+                        optionText={option.optionText}
+                      />
+                    ))}
                   </Select>
                 </Flex>
 
@@ -76,26 +79,14 @@ const Shop = () => {
                     id="show"
                     className="block cursor-pointer border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
-                    <SelectOption
-                      optionValue="6"
-                      className="bg-[#999] text-pure"
-                      optionText="6"
-                    />
-                    <SelectOption
-                      optionValue="12"
-                      className="bg-[#999] text-pure"
-                      optionText="12"
-                    />
-                    <SelectOption
-                      optionValue="24"
-                      className="bg-[#999] text-pure"
-                      optionText="24"
-                    />
-                    <SelectOption
-                      optionValue="48"
-                      className="bg-[#999] text-pure"
-                      optionText="48"
-                    />
+                    {showOptions.map((option, index) => (
+                      <SelectOption
+                        key={index}
+                        optionValue={option.optionValue}
+                        className="bg-[#999] text-pure"
+                        optionText={option.optionText}
+                      />
+                    ))}
                   </Select>
                 </Flex>
               </Flex>
