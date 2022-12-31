@@ -9,6 +9,7 @@ import { FaList } from "react-icons/fa";
 import Select from "../components/layout/Select";
 import SelectOption from "../components/layout/SelectOption";
 import Label from "../components/layout/Label";
+import SideBarMenu from "../components/layout/SideBarMenu";
 
 const Shop = () => {
   // let params = useParams();
@@ -33,7 +34,9 @@ const Shop = () => {
         <Bredcrumb title="Products" />
 
         <Flex className="flex gap-x-3 md:gap-x-5 xl:gap-x-10">
-          <div className="w-[20%] bg-red-400"> left part </div>
+          <div className="w-[20%] ">
+            <SideBarMenu />
+          </div>
 
           <div className="relative w-[80%]">
             <Flex className="flex flex-wrap items-center justify-between gap-y-2 pb-8 lg:gap-y-0 lg:pb-10 xl:pb-[60px]">
