@@ -4,24 +4,19 @@ const SideBarMenuItemListItem = ({
   className,
   listTitle,
   isSingle,
-  multipleClass,
   listColor,
 }) => {
   return (
-    <>
-      {isSingle ? (
-        <div className={className}> {listTitle} </div>
-      ) : (
-        <div className={multipleClass}>
-          <div
-            className="h-[11px] w-[11px] rounded-[50%]"
-            style={{ background: listColor }}
-          ></div>
-
-          <div className={className}> {listTitle} </div>
-        </div>
+    <div className={className}>
+      {!isSingle && (
+        <div
+          className="float-left mt-[2px] mr-2 h-[11px] w-[11px] rounded-[50%] md:mt-[3px] lg:mt-[4px] xl:mr-[10px] xl:mt-[6px] "
+          style={{ background: listColor }}
+        ></div>
       )}
-    </>
+
+      <span className="overflow-hidden"> {listTitle} </span>
+    </div>
   );
 };
 

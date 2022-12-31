@@ -30,8 +30,7 @@ const SideBarMenuItem = ({
               {category.map((item, index) => (
                 <SideBarMenuItemListItem
                   key={index}
-                  className="border-b-[1px] border-smoke py-2 lg:py-3 font-dm text-xs font-normal text-secondary lg:text-sm xl:text-base 2xl:py-5"
-                  multipleClass="flex items-center gap-x-[6px] lg:gap-x-[10px]"
+                  className="border-b-[1px] border-smoke py-2 font-dm text-xs font-normal text-secondary lg:py-3 lg:text-sm xl:text-base 2xl:py-5"
                   isSingle={isSingle}
                   listTitle={item.title}
                   listColor={item.color}
