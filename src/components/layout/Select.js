@@ -1,8 +1,8 @@
 import React from "react";
 
-const Select = ({ id, className, children }) => {
+const Select = ({ onChange, id, className, children }) => {
   return (
-    <select id={id} className={className}>
+    <select onChange={onChange} id={id} className={className}>
       {children}
     </select>
   );

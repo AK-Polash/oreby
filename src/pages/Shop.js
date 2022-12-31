@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "../components/layout/Container";
 // import { useParams } from "react-router-dom";
 import Bredcrumb from "../components/layout/Bredcrumb";
@@ -12,6 +12,8 @@ import Label from "../components/layout/Label";
 
 const Shop = () => {
   // let params = useParams();
+  let [productShow, setProductShow] = useState(6);
+
   return (
     <div className="w-full">
       <Container>
@@ -70,9 +72,15 @@ const Shop = () => {
                     labelText="Show:"
                   />
                   <Select
+                    onChange={(e) => setProductShow(e.target.value)}
                     id="show"
                     className="block cursor-pointer border-2 border-smoke bg-transparent py-[2px] px-2 font-dm text-sm font-normal text-secondary focus:border-blue-300 lg:py-[5px] lg:px-5 lg:text-base"
                   >
+                    <SelectOption
+                      optionValue="6"
+                      className="bg-[#999] text-pure"
+                      optionText="6"
+                    />
                     <SelectOption
                       optionValue="12"
                       className="bg-[#999] text-pure"
@@ -93,7 +101,7 @@ const Shop = () => {
               </Flex>
             </Flex>
 
-            <Pagination itemsPerPage={12} />
+            <Pagination itemsPerPage={productShow} />
           </div>
         </Flex>
       </Container>
