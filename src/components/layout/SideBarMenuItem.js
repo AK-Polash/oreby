@@ -16,13 +16,17 @@ const SideBarMenuItem = ({
   return (
     <>
       {drop ? (
-        <div>
+        <div className="mb-3 md:mb-5 lg:mb-7 2xl:mb-12">
           <div
             onClick={() => setShow(!show)}
-            className="flex cursor-pointer items-center justify-between"
+            className="mb-[2px] flex cursor-pointer items-center justify-between lg:mb-1 2xl:mb-4"
           >
             <h3 className={headingClassName}> {heading} </h3>
-            {show ? <GoTriangleUp /> : <GoTriangleDown />}
+            {show ? (
+              <GoTriangleUp className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
+            ) : (
+              <GoTriangleDown className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
+            )}
           </div>
 
           {show && (

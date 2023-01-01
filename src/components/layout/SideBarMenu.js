@@ -23,26 +23,26 @@ const SideBarMenu = () => {
       <SideBarMenuItem
         dropDown={false}
         heading="Shop by Category"
-        headingClassName="w-full font-dm font-bold text-sm lg:text-base xl:text-xl text-primary"
+        headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
       />
       <SideBarMenuItem
         dropDown={true}
         heading="Shop by Color"
-        headingClassName="w-full font-dm font-bold text-sm lg:text-base xl:text-xl text-primary"
+        headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
         category={color}
         isSingle={false}
       />
       <SideBarMenuItem
         dropDown={true}
         heading="Shop by Brand"
-        headingClassName="w-full font-dm font-bold text-sm lg:text-base xl:text-xl text-primary"
+        headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
         category={brand}
         isSingle={true}
       />
       <SideBarMenuItem
         dropDown={false}
         heading="Shop by Price"
-        headingClassName="w-full font-dm font-bold text-sm lg:text-base xl:text-xl text-primary"
+        headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
       />
     </div>
   );
