@@ -1,14 +1,18 @@
 let category = [
   {
     cat: "Category 1",
-    subCategory: [{ cat: "Category 11" }, { cat: "Category 12" }],
+    subCategory: [{ cat: "Sub Category 1" }, { cat: "Sub Category 2" }],
   },
   {
     cat: "Category 2",
   },
   {
     cat: "Category 3",
-    subCategory: [{ cat: "Category 31" }, { cat: "Category 32" }],
+    subCategory: [
+      { cat: "Sub Category 1" },
+      { cat: "Sub Category 2" },
+      { cat: "Sub Category 3" },
+    ],
   },
   {
     cat: "Category 4",
