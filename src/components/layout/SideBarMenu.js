@@ -2,9 +2,9 @@ import React from "react";
 import SideBarMenuItem from "./SideBarMenuItem";
 import { category, color, brand, price } from "../../Data/Data";
 
-const SideBarMenu = () => {
+const SideBarMenu = ({ className }) => {
   return (
-    <>
+    <div className={className}>
       <SideBarMenuItem
         dropDown={false}
         heading="Shop by Category"
@@ -34,7 +34,7 @@ const SideBarMenu = () => {
         data={price}
         isSingle={true}
       />
-    </>
+    </div>
   );
 };
 

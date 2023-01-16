@@ -35,7 +35,7 @@ const Shop = () => {
 
         <Flex className="flex gap-x-3 md:gap-x-5 xl:gap-x-10">
           <div className="w-[20%] ">
-            <SideBarMenu />
+            <SideBarMenu className="w-full" />
           </div>
 
           <div className="relative w-[80%]">
