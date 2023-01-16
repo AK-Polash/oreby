@@ -83,19 +83,21 @@ const SideBarMenuItem = ({
                         as="div"
                       />
                     )}
+                  </SideBarMenuItemListItem>
 
+                  <div className="w-full">
                     {see &&
                       item.subCategory &&
                       item.subCategory.map((subItem, subIndex) => (
                         <SideBarMenuItemListItem
                           key={subIndex}
-                          className="pt-2 pl-3 font-dm text-xs font-normal text-secondary lg:pt-3 lg:text-sm xl:text-base 2xl:pt-5"
+                          className="border-b-[1px] border-smoke py-2 font-dm text-xs font-normal text-secondary lg:py-3 lg:text-sm xl:text-base 2xl:py-5"
                           isSingle={isSingle}
                           listTitle={subItem.cat}
                           subChild={false}
                         />
                       ))}
-                  </SideBarMenuItemListItem>
+                  </div>
                 </>
               ))}
             </SideBarMenuItemList>
