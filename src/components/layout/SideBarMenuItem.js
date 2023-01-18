@@ -11,18 +11,18 @@ const SideBarMenuItem = ({
   let [show, setShow] = useState(true);
 
   return (
-    <div className="mb-8">
+    <div className="mb-7 2xl:mb-10">
       {dropDown ? (
         <div
           onClick={() => setShow(!show)}
-          className="mb-[2px] flex cursor-pointer items-center justify-between lg:mb-1 2xl:mb-4"
+          className="flex cursor-pointer items-center justify-between"
         >
           <h3 className={headingClassName}> {headingTitle} </h3>
 
           {show ? (
-            <GoTriangleDown className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
-          ) : (
             <GoTriangleUp className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
+          ) : (
+            <GoTriangleDown className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
           )}
         </div>
       ) : (

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { BsPlusLg } from "react-icons/bs";
-import { CgMathMinus } from "react-icons/cg";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
-const SideBarMenuItemList = ({ subdrop, listTitle, children, color }) => {
+const SideBarMenuItemList = ({ subdrop, listTitle, color, children }) => {
   let [show, setShow] = useState(false);
 
   return (
@@ -24,9 +23,9 @@ const SideBarMenuItemList = ({ subdrop, listTitle, children, color }) => {
           </h2>
 
           {show ? (
-            <CgMathMinus className="text-[8px] md:text-[12px] lg:text-sm 2xl:text-base" />
+            <FaMinus className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
           ) : (
-            <BsPlusLg className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
+            <FaPlus className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
           )}
         </div>
       )}
