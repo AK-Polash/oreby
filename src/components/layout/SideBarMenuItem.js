@@ -11,7 +11,7 @@ const SideBarMenuItem = ({
   let [show, setShow] = useState(true);
 
   return (
-    <div className="mb-7 2xl:mb-10">
+    <div className="mb-4 2xl:mb-10">
       {dropDown ? (
         <div
           onClick={() => setShow(!show)}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Container from "../components/layout/Container";
 import Bredcrumb from "../components/layout/Bredcrumb";
 import Flex from "../components/layout/Flex";
@@ -28,6 +28,9 @@ const Shop = () => {
   ];
 
   let [show, setShow] = useState(false);
+  let filterRef = useRef();
+  let sideBarMenuRef = useRef();
+
   let handleToggle = () => {
     setShow(!show);
   };
@@ -42,6 +45,16 @@ const Shop = () => {
     }
     scrollWidth();
     window.addEventListener("resize", scrollWidth);
+
+    document.body.addEventListener("click", (e) => {
+      if (filterRef.current.contains(e.target)) {
+        setShow(true);
+      } else if (sideBarMenuRef.current.contains(e.target)) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    });
   }, []);
 
   return (
@@ -49,13 +62,18 @@ const Shop = () => {
       <Container>
         <Bredcrumb title="Products" />
 
-        <Flex className="relative flex gap-x-3 md:gap-x-5 xl:gap-x-10">
-          {show && (
-            <SideBarMenu
-              toggle={handleToggle}
-              className="absolute top-0 left-0 z-10 w-[47%] bg-red-100 px-3 py-7 sm:static sm:w-[25%] sm:bg-transparent sm:p-0 md:w-[20%]"
-            />
-          )}
+        <Flex className="flex gap-x-3 md:gap-x-5 xl:gap-x-10">
+          <div
+            ref={sideBarMenuRef}
+            className="absolute top-0 left-0 z-10 w-[50%] bg-gray-100 sm:static sm:w-[25%] sm:bg-transparent  md:w-[20%]"
+          >
+            {show && (
+              <SideBarMenu
+                toggle={handleToggle}
+                className="w-full px-3 py-7 sm:p-0"
+              />
+            )}
+          </div>
 
           <div className="relative w-full md:w-[80%]">
             <Flex className="flex flex-wrap items-center justify-between gap-y-2 pb-8 lg:gap-y-0 lg:pb-10 xl:pb-[60px]">
@@ -67,6 +85,7 @@ const Shop = () => {
                   <FaList className="text-xs text-primary group-hover:text-pure lg:text-base" />
                 </div>
                 <div
+                  ref={filterRef}
                   onClick={handleToggle}
                   className="group flex h-7 w-7 cursor-pointer items-center justify-center border-2 border-solid border-smoke bg-transparent transition-all duration-100 ease-linear hover:border-transparent hover:bg-primary sm:hidden lg:h-9 lg:w-9"
                 >
