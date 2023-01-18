@@ -41,20 +41,20 @@ const Shop = () => {
         setShow(true);
       } else {
         setShow(false);
+
+        document.body.addEventListener("click", (e) => {
+          if (filterRef.current.contains(e.target)) {
+            setShow(true);
+          } else if (sideBarMenuRef.current.contains(e.target)) {
+            setShow(true);
+          } else {
+            setShow(false);
+          }
+        });
       }
     }
     scrollWidth();
     window.addEventListener("resize", scrollWidth);
-
-    document.body.addEventListener("click", (e) => {
-      if (filterRef.current.contains(e.target)) {
-        setShow(true);
-      } else if (sideBarMenuRef.current.contains(e.target)) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-    });
   }, []);
 
   return (
@@ -62,15 +62,15 @@ const Shop = () => {
       <Container>
         <Bredcrumb title="Products" />
 
-        <Flex className="flex gap-x-3 md:gap-x-5 xl:gap-x-10">
+        <Flex className="relative flex gap-x-3 md:gap-x-5 xl:gap-x-10">
           <div
             ref={sideBarMenuRef}
-            className="absolute top-0 left-0 z-10 w-[50%] bg-gray-100 sm:static sm:w-[25%] sm:bg-transparent  md:w-[20%]"
+            className="fixed top-0 left-0 z-10 w-[50%] bg-flat sm:static sm:w-[25%] sm:bg-transparent  md:w-[20%]"
           >
             {show && (
               <SideBarMenu
                 toggle={handleToggle}
-                className="w-full px-3 py-7 sm:p-0"
+                className="relative h-screen w-full overflow-y-scroll px-4 pt-9 sm:h-auto sm:overflow-y-auto sm:p-0"
               />
             )}
           </div>

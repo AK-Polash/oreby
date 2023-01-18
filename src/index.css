@@ -39,3 +39,8 @@
 .active {
   color: red;
 }
+
+/* For Removing Scrollbar in Shop page Left Side MenuBar */
+::-webkit-scrollbar {
+  display: none;
+}

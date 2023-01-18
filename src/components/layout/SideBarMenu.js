@@ -8,7 +8,7 @@ const SideBarMenu = ({ className, toggle }) => {
     <div className={className}>
       <IoClose
         onClick={toggle}
-        className="absolute top-3 right-2 z-40 inline-block cursor-pointer text-xl sm:hidden"
+        className="absolute top-3.5 right-2 z-40 inline-block cursor-pointer text-xl transition-all duration-75 ease-linear hover:bg-primary hover:text-pure sm:hidden"
       />
 
       <SideBarMenuItem
