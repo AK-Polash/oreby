@@ -56,7 +56,7 @@ const Header = () => {
               </div>
 
               {categoryDropdownShow && (
-                <List className="absolute top-9 z-10 w-[263px] bg-primary">
+                <List className="absolute top-9 z-20 w-[263px] bg-primary">
                   <ListItem
                     className="border-b-[1px] border-rare font-dm text-sm font-normal text-fade transition-all duration-150 ease-linear hover:pl-7 hover:font-bold hover:text-pure"
                     item="Accesories"

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "../components/layout/Container";
-// import { useParams } from "react-router-dom";
 import Bredcrumb from "../components/layout/Bredcrumb";
 import Flex from "../components/layout/Flex";
 import Pagination from "../components/layout/Pagination";
@@ -10,9 +9,9 @@ import Select from "../components/layout/Select";
 import SelectOption from "../components/layout/SelectOption";
 import Label from "../components/layout/Label";
 import SideBarMenu from "../components/layout/SideBarMenu";
+import { IoFilterSharp } from "react-icons/io5";
 
 const Shop = () => {
-  // let params = useParams();
   let showOptions = [
     { optionValue: 12, optionText: 12 },
     { optionValue: 24, optionText: 24 },
@@ -28,24 +27,50 @@ const Shop = () => {
     { optionValue: "specialOffer", optionText: "Special Offer" },
   ];
 
+  let [show, setShow] = useState(false);
+  let handleToggle = () => {
+    setShow(!show);
+  };
+
+  useEffect(() => {
+    function scrollWidth() {
+      if (window.innerWidth >= 640) {
+        setShow(true);
+      } else {
+        setShow(false);
+      }
+    }
+    scrollWidth();
+    window.addEventListener("resize", scrollWidth);
+  }, []);
+
   return (
     <div className="w-full">
       <Container>
         <Bredcrumb title="Products" />
 
-        <Flex className="flex gap-x-3 md:gap-x-5 xl:gap-x-10">
-          <div className="w-[20%] ">
-            <SideBarMenu className="w-full" />
-          </div>
+        <Flex className="relative flex gap-x-3 md:gap-x-5 xl:gap-x-10">
+          {show && (
+            <SideBarMenu
+              toggle={handleToggle}
+              className="absolute top-0 left-0 z-10 w-[47%] bg-red-100 px-3 py-7 sm:static sm:w-[25%] sm:bg-transparent sm:p-0 md:w-[20%]"
+            />
+          )}
 
-          <div className="relative w-[80%]">
+          <div className="relative w-full md:w-[80%]">
             <Flex className="flex flex-wrap items-center justify-between gap-y-2 pb-8 lg:gap-y-0 lg:pb-10 xl:pb-[60px]">
               <Flex className="flex items-center gap-x-1.5 lg:gap-x-5">
-                <div className="group flex h-7 w-7 cursor-pointer items-center justify-center border-2 border-solid border-smoke bg-transparent transition-all duration-100 ease-linear hover:border-transparent hover:bg-primary lg:h-9 lg:w-9">
+                <div className="group hidden h-7 w-7 cursor-pointer items-center justify-center border-2 border-solid border-smoke bg-transparent transition-all duration-100 ease-linear hover:border-transparent hover:bg-primary sm:flex lg:h-9 lg:w-9">
                   <TfiLayoutGrid2Alt className="text-xs text-primary group-hover:text-pure lg:text-base" />
                 </div>
-                <div className="group flex h-7 w-7 cursor-pointer items-center justify-center border-2 border-solid border-smoke bg-transparent transition-all duration-100 ease-linear hover:border-transparent hover:bg-primary lg:h-9 lg:w-9">
+                <div className="group hidden h-7 w-7 cursor-pointer items-center justify-center border-2 border-solid border-smoke bg-transparent transition-all duration-100 ease-linear hover:border-transparent hover:bg-primary sm:flex lg:h-9 lg:w-9">
                   <FaList className="text-xs text-primary group-hover:text-pure lg:text-base" />
+                </div>
+                <div
+                  onClick={handleToggle}
+                  className="group flex h-7 w-7 cursor-pointer items-center justify-center border-2 border-solid border-smoke bg-transparent transition-all duration-100 ease-linear hover:border-transparent hover:bg-primary sm:hidden lg:h-9 lg:w-9"
+                >
+                  <IoFilterSharp className="text-sm text-primary group-hover:text-pure" />
                 </div>
               </Flex>
               <Flex className="flex flex-wrap items-center justify-between gap-y-2 gap-x-1.5 lg:gap-x-10 lg:gap-y-0">

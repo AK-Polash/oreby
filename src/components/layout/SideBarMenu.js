@@ -1,10 +1,16 @@
 import React from "react";
 import SideBarMenuItem from "./SideBarMenuItem";
 import { category, color, brand, price } from "../../Data/Data";
+import { IoClose } from "react-icons/io5";
 
-const SideBarMenu = ({ className }) => {
+const SideBarMenu = ({ className, toggle }) => {
   return (
     <div className={className}>
+      <IoClose
+        onClick={toggle}
+        className="absolute top-1 right-1 inline-block cursor-pointer text-xl sm:hidden"
+      />
+
       <SideBarMenuItem
         dropDown={false}
         headingTitle="Shop by Category"
