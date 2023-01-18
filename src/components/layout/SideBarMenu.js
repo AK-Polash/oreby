@@ -7,32 +7,27 @@ const SideBarMenu = ({ className }) => {
     <div className={className}>
       <SideBarMenuItem
         dropDown={false}
-        heading="Shop by Category"
+        headingTitle="Shop by Category"
         headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
-        isSingle={true}
         data={category}
-        nested={true}
       />
       <SideBarMenuItem
         dropDown={true}
-        heading="Shop by Color"
+        headingTitle="Shop by Color"
         headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
         data={color}
-        isSingle={false}
       />
       <SideBarMenuItem
         dropDown={true}
-        heading="Shop by Brand"
+        headingTitle="Shop by Brand"
         headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
         data={brand}
-        isSingle={true}
       />
       <SideBarMenuItem
         dropDown={false}
-        heading="Shop by Price"
+        headingTitle="Shop by Price"
         headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
         data={price}
-        isSingle={true}
       />
     </div>
   );
