@@ -44,3 +44,8 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* For Removing the default cross icon in search bar */
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
