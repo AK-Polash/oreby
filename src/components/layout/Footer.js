@@ -32,7 +32,7 @@ const Footer = () => {
               <ListItem
                 className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
                 item="About"
-                href="#"
+                href="/about"
                 linkStyle="inline-block"
               />
               <ListItem

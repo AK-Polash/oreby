@@ -37,7 +37,7 @@ const Banner = () => {
     customPaging: (i) => (
       <div
         style={
-          i == dotActive
+          i === dotActive
             ? {
                 width: "22px",
                 color: "#262626",
@@ -85,7 +85,7 @@ const Banner = () => {
           customPaging: (i) => (
             <div
               style={
-                i == dotActive
+                i === dotActive
                   ? {
                       width: "22px",
                       color: "#262626",

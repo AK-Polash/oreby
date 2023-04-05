@@ -11,10 +11,8 @@ import { RiBarChartHorizontalLine } from "react-icons/ri";
 import { FaUserAlt, FaShoppingCart, FaSearch } from "react-icons/fa";
 import { RxTriangleDown } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
-import { Events, scrollSpy } from "react-scroll";
 
 const Header = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
   let [categoryDropdownShow, setCategoryDropdownShow] = useState(false);
   let [userDropdownShow, setUserDropdownShow] = useState(false);
   let [cartDropdownShow, setCartDropdownShow] = useState(false);
@@ -44,32 +42,9 @@ const Header = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const isScrolled = scrollTop >= 52;
-      setHasScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    Events.scrollEvent.register("scroll", handleScroll);
-    scrollSpy.update();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      Events.scrollEvent.remove("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <>
-      <div
-        className={
-          hasScrolled
-            ? "sticky top-0 left-0 z-50 w-full bg-flat py-0 shadow-lg transition-all duration-150 ease-linear lg:py-[5px] xl:py-3 2xl:py-[25px]"
-            : "w-full bg-flat py-0 lg:py-[5px] xl:py-3 2xl:py-[25px]"
-        }
-      >
+      <div className="w-full bg-flat py-0 lg:py-1 2xl:py-1.5">
         <Container>
           <Flex className="flex items-center justify-between gap-x-[10px]">
             <Dropdown className="relative" dropRef={categoryRef}>
