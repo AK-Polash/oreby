@@ -76,7 +76,7 @@ const Navbar = () => {
                 <ListItem
                   className="font-dm text-sm font-bold text-secondary hover:text-primary"
                   item="Contacts"
-                  href="#"
+                  href="/contacts"
                   onClick={() => setShow(!show)}
                   linkStyle="inline-block"
                 />

@@ -37,13 +37,13 @@ const Footer = () => {
               />
               <ListItem
                 className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
-                item="Contact"
-                href="#"
+                item="Contacts"
+                href="/contacts"
                 linkStyle="inline-block"
               />
               <ListItem
                 className="mt-[6px] font-dm text-[13px] font-normal text-valin md:text-sm"
-                item="Journal1"
+                item="Journal"
                 href="#"
                 linkStyle="inline-block"
               />

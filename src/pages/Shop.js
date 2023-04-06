@@ -60,7 +60,7 @@ const Shop = () => {
   return (
     <div className="w-full">
       <Container>
-        <Bredcrumb title="Products" />
+        <Bredcrumb />
 
         <Flex className="relative flex gap-x-3 md:gap-x-5 xl:gap-x-10">
           <div
