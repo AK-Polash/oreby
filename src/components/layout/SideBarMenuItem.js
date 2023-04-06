@@ -20,9 +20,9 @@ const SideBarMenuItem = ({
           <h3 className={headingClassName}> {headingTitle} </h3>
 
           {show ? (
-            <GoTriangleUp className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
+            <GoTriangleUp className="text-sm" />
           ) : (
-            <GoTriangleDown className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
+            <GoTriangleDown className="text-sm" />
           )}
         </div>
       ) : (
@@ -42,7 +42,7 @@ const SideBarMenuItem = ({
                   {item.subCategory.map((subItem, subIndex) => (
                     <h3
                       key={subIndex}
-                      className="border-b-[1px] border-smoke py-2 font-dm text-xs font-normal text-secondary lg:py-3 lg:text-sm xl:text-base 2xl:py-5"
+                      className="border-b-[1px] border-smoke py-2 font-dm text-base font-normal text-secondary lg:py-3 2xl:py-5"
                     >
                       {subItem.colorCode && (
                         <span
@@ -58,7 +58,7 @@ const SideBarMenuItem = ({
               ) : (
                 <h2
                   subdrop={"false"}
-                  className="border-b-[1px] border-smoke py-2 font-dm text-xs font-normal text-secondary lg:py-3 lg:text-sm xl:text-base 2xl:py-5"
+                  className="border-b-[1px] border-smoke py-2 font-dm text-base font-normal text-secondary lg:py-3 2xl:py-5"
                 >
                   {item.colorCode && (
                     <span

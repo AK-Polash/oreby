@@ -22,6 +22,9 @@ module.exports = {
         smoke: "#f0f0f0",
         valin: "#6D6D6D",
       },
+      boxShadow: {
+        "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
+      },
     },
   },
   plugins: [],

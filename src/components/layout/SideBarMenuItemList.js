@@ -11,7 +11,7 @@ const SideBarMenuItemList = ({ subdrop, listTitle, color, children }) => {
           onClick={() => setShow(!show)}
           className="flex cursor-pointer items-center justify-between border-b-[1px] border-smoke py-2 font-dm text-xs font-normal text-secondary lg:py-3 lg:text-sm xl:text-base 2xl:py-5"
         >
-          <h2 className="font-dm text-xs font-normal text-secondary lg:text-sm xl:text-base">
+          <h2 className="font-dm text-base font-normal text-secondary">
             {color && (
               <span
                 className="mr-2 inline-block h-[11px] w-[11px] rounded-[50%]"
@@ -23,9 +23,9 @@ const SideBarMenuItemList = ({ subdrop, listTitle, color, children }) => {
           </h2>
 
           {show ? (
-            <FaMinus className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
+            <FaMinus className="text-sm" />
           ) : (
-            <FaPlus className="text-[8px] md:text-[10px] lg:text-xs 2xl:text-sm" />
+            <FaPlus className="text-sm" />
           )}
         </div>
       )}

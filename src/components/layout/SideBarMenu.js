@@ -7,32 +7,33 @@ const SideBarMenu = ({ className, toggle }) => {
   return (
     <div className={className}>
       <IoClose
+        title="close"
         onClick={toggle}
-        className="absolute top-3.5 right-2 z-40 inline-block cursor-pointer text-xl transition-all duration-75 ease-linear hover:bg-primary hover:text-pure sm:hidden"
+        className="absolute top-3.5 right-2 z-40 inline-block cursor-pointer text-3xl transition-all duration-75 ease-linear hover:bg-primary hover:text-pure sm:hidden"
       />
 
       <SideBarMenuItem
         dropDown={false}
         headingTitle="Shop by Category"
-        headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
+        headingClassName="w-full font-dm font-bold text-base 2xl:text-xl text-primary"
         data={category}
       />
       <SideBarMenuItem
         dropDown={true}
         headingTitle="Shop by Color"
-        headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
+        headingClassName="w-full font-dm font-bold text-base 2xl:text-xl text-primary"
         data={color}
       />
       <SideBarMenuItem
         dropDown={true}
         headingTitle="Shop by Brand"
-        headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
+        headingClassName="w-full font-dm font-bold text-base 2xl:text-xl text-primary"
         data={brand}
       />
       <SideBarMenuItem
         dropDown={false}
         headingTitle="Shop by Price"
-        headingClassName="w-full font-dm font-bold text-sm lg:text-base 2xl:text-xl text-primary"
+        headingClassName="w-full font-dm font-bold text-base 2xl:text-xl text-primary"
         data={price}
       />
     </div>

@@ -6,6 +6,7 @@ import ListItem from "./ListItem";
 import { HiBars3 } from "react-icons/hi2";
 import { RxCross2 } from "react-icons/rx";
 import Container from "./Container";
+import { animateScroll } from "react-scroll";
 
 const Navbar = () => {
   const [show, setShow] = useState(true);
@@ -28,7 +29,12 @@ const Navbar = () => {
       <Container>
         <Flex className="items-center justify-between lg:flex">
           <div className="w-1/5">
-            <Image source="assets/logo.png" className="w-16" alt="logo" />
+            <Image
+              source="assets/logo.png"
+              className="w-16 cursor-pointer"
+              onClick={() => animateScroll.scrollToTop()}
+              alt="logo"
+            />
           </div>
 
           {show ? (

@@ -1,9 +1,13 @@
 import React from "react";
 
-const Image = ({ source, className, alt }) => {
+const Image = ({ source, className, alt, onClick }) => {
   return (
     <>
-      <img src={source} className={className} alt={alt} />
+      {onClick ? (
+        <img src={source} className={className} alt={alt} onClick={onClick} />
+      ) : (
+        <img src={source} className={className} alt={alt} />
+      )}
     </>
   );
 };

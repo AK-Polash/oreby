@@ -65,12 +65,12 @@ const Shop = () => {
         <Flex className="relative flex gap-x-3 md:gap-x-5 xl:gap-x-10">
           <div
             ref={sideBarMenuRef}
-            className="fixed top-0 left-0 z-10 w-[50%] bg-flat sm:static sm:w-[25%] sm:bg-transparent  md:w-[20%]"
+            className="fixed top-0 left-0 z-50 w-[70%] bg-flat sm:static sm:z-auto sm:w-[25%] sm:bg-transparent md:w-[20%]"
           >
             {show && (
               <SideBarMenu
                 toggle={handleToggle}
-                className="relative h-screen w-full overflow-y-scroll px-4 pt-9 sm:h-auto sm:overflow-y-auto sm:p-0"
+                className="relative h-screen w-full overflow-y-scroll px-4 pt-9 shadow-3xl sm:h-auto sm:overflow-y-auto sm:p-0 sm:shadow-none"
               />
             )}
           </div>
