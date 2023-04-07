@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { FiPlus, FiMinus } from "react-icons/fi";
 
-const Accordion = ({ accordionValues }) => {
+const Accordion = ({ accordionValues, className }) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="w-full">
+    <div className={className}>
       {accordionValues.map(({ heading, content }, index) => (
         <div className="w-full bg-pure shadow-md lg:w-[450px]" key={index}>
           <div
