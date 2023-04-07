@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { FiPlus, FiMinus } from "react-icons/fi";
 
 const SideBarMenuItemList = ({ subdrop, listTitle, color, children }) => {
   let [show, setShow] = useState(false);
@@ -23,9 +23,9 @@ const SideBarMenuItemList = ({ subdrop, listTitle, color, children }) => {
           </h2>
 
           {show ? (
-            <FaMinus className="text-sm" />
+            <FiMinus className="text-base" />
           ) : (
-            <FaPlus className="text-sm" />
+            <FiPlus className="text-base" />
           )}
         </div>
       )}

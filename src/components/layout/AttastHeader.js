@@ -1,28 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Events, scrollSpy } from "react-scroll";
+import React from "react";
 import Header from "./Header";
 import Navbar from "./Navbar";
 
-const AttastHeader = () => {
-  const [hasScrolled, setHasScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const isScrolled = scrollTop >= 120;
-      setHasScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    Events.scrollEvent.register("scroll", handleScroll);
-    scrollSpy.update();
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      Events.scrollEvent.remove("scroll", handleScroll);
-    };
-  }, []);
-
+const AttastHeader = ({ hasScrolled }) => {
   return (
     <div
       className={
