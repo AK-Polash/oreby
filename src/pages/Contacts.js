@@ -77,7 +77,7 @@ const Contacts = () => {
           </form>
         </div>
 
-        <Map className="relative my-36 h-[570px] w-full bg-gray-300" />
+        <Map />
       </Container>
     </div>
   );

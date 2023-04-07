@@ -1,7 +1,7 @@
 import React from "react";
 import Accordion from "./Accordion";
 
-const Map = ({ className }) => {
+const Map = () => {
   const accordionValues = [
     {
       heading: "Germany Office",
@@ -33,7 +33,7 @@ const Map = ({ className }) => {
   ];
 
   return (
-    <div className={className}>
+    <div className="relative my-36 h-[570px] w-full">
       <iframe
         className="h-3/5 w-full md:h-full"
         title="contact page"
