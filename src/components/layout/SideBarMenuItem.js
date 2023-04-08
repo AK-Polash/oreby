@@ -19,11 +19,25 @@ const SideBarMenuItem = ({
         >
           <h3 className={headingClassName}> {headingTitle} </h3>
 
-          {show ? (
+          {/* The Code bellow (line:23-27) was occuring a bug while on small screen menu icon click */}
+          {/* {show ? (
             <GoTriangleUp className="text-sm" />
           ) : (
             <GoTriangleDown className="text-sm" />
-          )}
+          )} */}
+          <div className="flex items-center justify-between">
+            <GoTriangleUp
+              className={`text-sm ${
+                show ? "visible order-last" : "invisible order-first"
+              }`}
+            />
+
+            <GoTriangleDown
+              className={`text-sm ${
+                show ? "invisible order-first" : "visible order-last"
+              }`}
+            />
+          </div>
         </div>
       ) : (
         <h3 className={headingClassName}> {headingTitle} </h3>

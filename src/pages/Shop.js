@@ -36,25 +36,28 @@ const Shop = () => {
   };
 
   useEffect(() => {
-    function scrollWidth() {
-      if (window.innerWidth >= 640) {
+    const handlePageClick = (e) => {
+      if (filterRef.current.contains(e.target)) {
+        setShow(true);
+      } else if (sideBarMenuRef.current.contains(e.target)) {
         setShow(true);
       } else {
         setShow(false);
-
-        document.body.addEventListener("click", (e) => {
-          if (filterRef.current.contains(e.target)) {
-            setShow(true);
-          } else if (sideBarMenuRef.current.contains(e.target)) {
-            setShow(true);
-          } else {
-            setShow(false);
-          }
-        });
       }
-    }
-    scrollWidth();
-    window.addEventListener("resize", scrollWidth);
+    };
+
+    const handleScreenWidthAction = () => {
+      if (window.innerWidth >= 640) {
+        setShow(true);
+        document.body.removeEventListener("click", handlePageClick);
+      } else {
+        setShow(false);
+        document.body.addEventListener("click", handlePageClick);
+      }
+    };
+
+    handleScreenWidthAction();
+    window.addEventListener("resize", handleScreenWidthAction);
   }, []);
 
   return (

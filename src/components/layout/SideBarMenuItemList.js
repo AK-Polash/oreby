@@ -22,11 +22,25 @@ const SideBarMenuItemList = ({ subdrop, listTitle, color, children }) => {
             {listTitle}
           </h2>
 
-          {show ? (
+          {/* The Code bellow (line:26-30) was occuring a bug while on small screen menu icon click */}
+          {/* {show ? (
             <FiMinus className="text-base" />
           ) : (
             <FiPlus className="text-base" />
-          )}
+          )} */}
+          <div className="flex items-center justify-between">
+            <FiMinus
+              className={`text-base ${
+                show ? "visible order-last" : "invisible order-first"
+              }`}
+            />
+
+            <FiPlus
+              className={`text-base ${
+                show ? "invisible order-first" : "visible order-last"
+              }`}
+            />
+          </div>
         </div>
       )}
 
